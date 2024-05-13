@@ -1,0 +1,9 @@
+.section-tagline {
+
+}
+
+.container {
+  width: 960px; /* Set width to 960px */
+  margin-left: auto; /* Distribute margin on the left side */
+  margin-right: auto; /* Distribute margin on the right side */
+}
