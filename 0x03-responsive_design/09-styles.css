@@ -1,0 +1,23 @@
+/* Footer section */
+
+/* Create a new media query of max-width: 767px */
+@media (max-width: 767px) {
+  :root {
+    /* Create the root global selector and override a CSS variable */
+    --footer-padding: 5rem 2rem 1rem;
+  }
+
+  /* Target .social.nav inside the footer class and the footer-nav class inside the footer class */
+  .footer .social.nav,
+  .footer .footer-nav {
+    /* Property: text-align, Value: center */
+    text-align: center;
+  }
+
+  /* Target the adjacent li to the li inside the .social.nav and the adjacent li to the li inside .footer-nav */
+  .footer .social.nav li + li,
+  .footer .footer-nav li + li {
+    /* Property: padding-left, Value: 2rem */
+    padding-left: 2rem;
+  }
+}
