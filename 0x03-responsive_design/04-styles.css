@@ -1,0 +1,87 @@
+/* 02-1-styles.css */
+
+/* Navbar Section */
+/* Hide the checkbox */
+.menu-btn {
+    display: none;
+}
+
+/* Style the menu icon (hamburger) */
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hamburger icon lines */
+.menu-icon .navicon {
+    background: #333;
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon .navicon:before {
+    top: -10px;
+}
+
+.menu-icon .navicon:after {
+    top: 10px;
+}
+
+/* Media query for max-width: 767px */
+@media (max-width: 767px) {
+    /* Override nav-item-margin variable */
+    :root {
+        --nav-item-margin: 0;
+    }
+
+    .navbar-menu {
+        flex: 1;
+    }
+
+    header nav {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s ease-out;
+    }
+
+    /* Show the menu when checkbox is checked */
+    .menu-btn:checked ~ .navbar-menu {
+        max-height: 500px; /* Adjust based on your menu's height */
+    }
+
+    /* Animate the hamburger icon to a cross */
+    .menu-btn:checked + .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked + .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu-btn:checked + .menu-icon .navicon:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+}
