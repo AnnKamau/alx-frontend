@@ -1,6 +1,13 @@
+/* Custom properties */
+[data-section-theme="dark"] {
+  --text-color: var(--color-white);
+  --section-title-color: var(--color-white);
+  background: var(--color-black);
+}
+
 /* Styling for footer-address class */
 .footer-address {
-  color: var(--text-color); /* Set text color using the text-color variable */
+  color: var(--text-color); /* Set text color using custom property */
 }
 
 /* Styling for social-link class */
@@ -11,13 +18,4 @@
 /* Styling for svg children within social-link class */
 .social-link svg {
   fill: var(--text-color); /* Fill color of svg children with text-color variable */
-}
-
-/* Override styles for dark theme */
-[data-section-theme="dark"] .footer-address {
-  color: var(--text-color); /* Set text color using the overridden text-color variable */
-}
-
-[data-section-theme="dark"] .social-link svg {
-  fill: var(--text-color); /* Override fill color of svg children with dark theme text-color variable */
 }
