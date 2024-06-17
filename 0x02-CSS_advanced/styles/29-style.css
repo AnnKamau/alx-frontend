@@ -7,9 +7,6 @@
   --header-logo-link-position: absolute;
   --header-logo-link-top: -1rem;
   --header-logo-link-left: 0;
-
-  /* Updated nav-item-link-hover property */
-  --nav-item-link-hover: var(--color-white);
 }
 
 .header {
@@ -27,19 +24,19 @@
   left: var(--header-logo-link-left);
 }
 
-/* New styles for nav-link pseudo-elements */
+/* Updated styles for nav-link pseudo-elements */
 
 .nav-link::before {
   content: ""; /* Empty content */
   position: absolute; /* Position absolutely */
-  top: 0; /* Vertical position */
-  left: 0; /* Horizontal position */
-  background-color: var(--nav-item-link-hover); /* Set background color */
-  width: 0; /* Width */
-  height: 20%; /* Height as 20% of the root element */
+  top: 0; /* Vertical position at 0 */
+  left: 0; /* Horizontal position at 0 */
+  background-color: var(--color-white); /* Set background color */
+  width: 0; /* Width 0 */
+  height: 20%; /* Height 20% of the root element */
 }
 
-.nav-item:hover .nav-link::before {
+.nav-link:hover::before {
   background-color: var(--color-primary); /* Set background color on hover */
   width: 100%; /* Full width */
 }
