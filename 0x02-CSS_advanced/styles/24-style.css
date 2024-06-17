@@ -1,14 +1,20 @@
+/* Targeting card-title inside card-services */
 .card-services .card-title {
-  margin: 0;
+  margin: 0; /* No margins at all */
 }
 
+/* Targeting a inside card-services */
 .card-services a {
-  display: block;
-  padding: calc(var(--root-element) * 2);
-  background-color: var(--color-light-grey);
+  display: block; /* Render as block level elements */
+  padding: calc(2 * var(--font-size-medium)); /* Set padding to 2x the root element */
+  background-color: var(--color-light-grey); /* Set background color using custom property */
+
+  /* Remove text decoration */
   text-decoration: none;
 }
 
+/* Hover state for a inside card-services */
 .card-services a:hover {
-  color: var(--color-white);
-  background-color: var(--color-primary);
+  color: var(--color-white); /* Set foreground color to color-white */
+  background-color: var(--color-primary); /* Set background color to color-primary */
+}
