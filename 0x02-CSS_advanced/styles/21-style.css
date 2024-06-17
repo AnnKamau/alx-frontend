@@ -1,12 +1,53 @@
+/* Custom properties */
+:root {
+  --section-tagline-margin: 0;
+  --footer-copyright-font-size: var(--font-size-small);
+  --footer-text-color: var(--text-color);
+}
+
+/* Targeting the section-tagline class */
+.section-tagline {
+  margin: var(--section-tagline-margin); /* Set margins using custom property */
+}
+
+/* Targeting all ul elements with the class row */
+ul.row {
+  margin: 0; /* 0 margins all around */
+  padding: 0; /* No padding all around */
+  list-style-type: none; /* No default list styles */
+}
+
+/* Select and style all classes that start with col- */
 [class^="col-"] {
-  float: left;
-  padding: calc(var(--root-element) / 2);
+  float: left; /* Float them to the left */
+  padding: calc(0.5 * var(--font-size-medium)); /* Set padding to half of the root element */
 }
 
+/* Specific styles for col-1-3 */
 .col-1-3 {
-  width: 33.33%;
+  width: 33.33%; /* Set width to 33.33% of its parent */
 }
 
+/* Specific styles for col-1-2 */
 .col-1-2 {
-  width: 50%;
+  width: 50%; /* Set width to 50% of its parent */
+}
+
+/* Targeting the footer-copyright class */
+.footer-copyright {
+  margin: 0; /* No margins */
+  font-size: var(--footer-copyright-font-size); /* Set font size using custom property */
+  color: var(--footer-text-color); /* Set foreground color using custom property */
+}
+
+/* Targeting ul elements within the footer class */
+.footer ul {
+  text-align: right; /* Align text to the right */
+}
+
+/* Creating a new row after each ul.row */
+ul.row:after {
+  content: ""; /* No content */
+  display: table; /* Display as a table */
+  clear: both; /* Clear floating elements on both sides */
 }
