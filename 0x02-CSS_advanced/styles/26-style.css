@@ -1,15 +1,56 @@
+/* Existing styles from styles/25-style.css */
+
+:root {
+  --button-display: inline-block;
+  --button-padding: 1.5rem 3rem;
+  --button-border: 0.2rem solid var(--color-primary);
+  --button-color: var(--color-black);
+  --button-text-decoration: none;
+  --button-font-size: var(--font-size-large);
+  --button-hover-color: var(--color-white);
+  --button-hover-text-decoration: none;
+  --button-hover-background: var(--color-primary);
+}
+
+a:active {
+
+}
+
+.button {
+  display: var(--button-display);
+  padding: var(--button-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  text-decoration: var(--button-text-decoration);
+}
+
+.button:hover {
+  color: var(--button-hover-color);
+  text-decoration: var(--button-hover-text-decoration);
+  background: var(--button-hover-background);
+}
+
+[data-section-theme="dark"] {
+  --button-color: var(--color-white);
+}
+
+/* Additional styles for card-testimonial */
+
 .card-testimonial {
-  text-align: center;
+  text-align: center; /* Center align the text */
 }
 
+/* Targeting card-avatar inside card-testimonial */
 .card-testimonial .card-avatar {
-  border-radius: 50%;
-  width: 10 * var(--root-element);
-  height: 10 * var(--root-element);
+  border-radius: 50%; /* Rounded corners */
+  width: 10rem; /* Set width to 10 times the root element */
+  height: 10rem; /* Set height to 10 times the root element */
 }
 
+/* Targeting <cite> tag inside card-quote within card-testimonial */
 .card-testimonial .card-quote cite {
-  display: block;
-  padding-top: var(--root-element);
-  color: var(--color-primary);
+  display: block; /* Render as block level element */
+  padding-top: var(--font-size-medium); /* Padding top with 1x the root element */
+  color: var(--color-primary); /* Set foreground color to color-primary variable */
 }
