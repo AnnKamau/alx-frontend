@@ -1,15 +1,19 @@
-a[href] {
-  
+/* Ensure that the declaration targeting anchor elements only targets those containing a hyperlink */
+a[href]:not(:empty) {
+  /* Ensure it targets only those containing a hyperlink */
 }
 
-a[href]:visited {
-  font-style: italic;
+/* Directly after this declaration, target the visited state for the link */
+a[href]:not(:empty):visited {
+  font-style: italic; /* Italicize the text */
 }
 
-a[href]:hover {
-  text-decoration: underline;
+/* Directly after the visited state, target the hover state for the link */
+a[href]:not(:empty):hover {
+  text-decoration: underline; /* Decorate the links with an underline when hovering */
 }
 
-a[href]:active {
-  background-color: var(--color-light-grey);
+/* Directly after the hover state, target the active state for the link */
+a[href]:not(:empty):active {
+  background-color: var(--color-light-grey); /* Set the background color using the variable color-light-grey */
 }
