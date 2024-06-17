@@ -1,16 +1,18 @@
-/* Custom font-family properties */
 :root {
-  --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-title: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Set body's font-family */
 body {
   font-family: var(--font-family-base);
 }
 
-/* New declaration for section headings */
+/* Targeting all 6 levels of section headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-title);
 }
 
+/* Assuming there's a links declaration that follows */
+a {
+  /* Your existing styles for links */
+}
